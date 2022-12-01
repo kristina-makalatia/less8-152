@@ -1,0 +1,136 @@
+.navigation-flex {
+    display: flex;
+    align-items: center;
+}
+.nav-block {
+    display: flex;
+    align-items: center;
+    width: 337px;
+    justify-content: space-between;
+    background-color: yellow;
+}
+.navigation {
+    margin-left: 92px;
+}
+.header-wraper {
+    padding: 18px 0 17px 20px;
+    background-color: grey;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 50;
+}
+body {
+    padding-top: 68px;
+}
+
+
+
+
+/* sectio styles */
+.block {
+    width: 360px;
+    height: 350px;
+    background-color: lightblue;
+}
+.container-block {
+    width:1160px;
+    margin: 0 auto; 
+}
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.text-block-absolute {
+    position: absolute;
+    top:28px;
+    left:40px;
+    color: #fff;
+}
+.image-block {
+    position: relative;
+}
+.text-block {
+    width: 280px;
+    margin:60px auto 40px auto;
+}
+
+/* position poroperty center */
+.parent-block {
+    width:600px;
+    height: 600px;
+    background-color: yellow;
+    position: relative;
+
+    /* transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 2s; */
+    transition:all 0.5s linear 2s;
+}
+.child-block {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg); 
+    transition: all 2s linear;
+}
+.hello {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.text-hello {
+    color: red;
+    margin:50px 0;
+    display: inline-block;
+    cursor:pointer;
+}
+
+/* hover effects */
+.text-hello:hover {
+    color:green;
+}
+.parent-block:hover {
+    background-color: blueviolet;
+}
+.child-block:hover {
+    background-color: red;
+    transform:translate(-50%,-50%) rotate(0deg);
+}
+
+/* car image animation */
+.car-image {
+    width: 150px;
+    /* animation-name: carmovie;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-direction: alternate; */
+
+    animation: carmovietransition 5s alternate linear 2s infinite;
+    /* position: absolute; */
+}
+.car-animation {
+    /* position: relative; */
+    /* height: 150px; */
+}
+
+
+/* keyframe */
+/* @keyframes carmovie {
+    from {left:0px;}
+    to {left: 800px;}
+} */
+
+
+@keyframes carmovietransition {
+    from {transform: translateX(0px);}
+    to {transform: translateX(800px);}
+}
